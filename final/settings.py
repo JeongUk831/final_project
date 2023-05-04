@@ -77,25 +77,49 @@ WSGI_APPLICATION = "final.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+    
+#     #'default' : {
+#     #    "ENGINE": "djongo",
+#     #    "NAME": BASE_DIR / "데이터베이스명",
+#     #}
+    
+#     #'default' : {
+#     #    "ENGINE": "django.db.backends.mysql",
+#     #    "NAME": "final",
+#     #    "USER": "root",
+#     #    "PASSWORD": "guess304!",
+#     #    "HOST": "localhost",
+#     #    "PORT": "3306",
+#     #}
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': True,
+        'LOGGING': {
+            'version': 1,
+            'loggers': {
+                'djongo': {
+                    'level': 'DEBUG',
+                    'propogate': False,                        
+                }
+            },
+         },
+        'NAME': 'final',
+        'CLIENT': {
+            'host': 'localhost',
+            'port': 27017,
+            'username': 'admin',
+            'password': "test123",
+            'authSource': 'admin',
+            'authMechanism': 'DEFAULT'
+        }
     }
-    
-    #'default' : {
-    #    "ENGINE": "djongo",
-    #    "NAME": BASE_DIR / "데이터베이스명",
-    #}
-    
-    #'default' : {
-    #    "ENGINE": "django.db.backends.mysql",
-    #    "NAME": "final",
-    #    "USER": "root",
-    #    "PASSWORD": "guess304!",
-    #    "HOST": "localhost",
-    #    "PORT": "3306",
-    #}
 }
 
 
