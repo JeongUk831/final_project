@@ -23,32 +23,11 @@
                 {% if results %}
                     <div><h5>{{results}}</h5></div>
                 {% endif %}
-
-                {% if diseases %}
-                    {% for disease in diseases %}
-                        <div>
-                            <h5>질병명 : {{disease.NAME}}</h5>
-                            <h5>증상키워드 : {{disease.SYMPTOM}}</h5>
-                            <h5>관련질환 : {{disease.RELATE}}</h5>
-                            <h5>진료과 : {{disease.DEPT}}</h5>
-                        </div>
-                        <hr/>
-
-                        <div>
-                            <h3>정의</h3> <h4>{{disease.DEFINE}}</h4></div><hr/>
-                            <h3>원인</h3> <h4>{{disease.REASON}}</h4></div><hr/>
-                            <h3>증상설명</h3> <h4>{{disease.SYMPTOM_TEXT}}</h4></div><hr/>
-                            <h3>진단</h3> <h4>{{disease.DIAGNOSIS}}</h4></div><hr/>
-                            <h3>치료</h3> <h4>{{disease.THERAPY}}</h4></div><hr/>
-                        </div>
-                    {% endfor %}
-                {% endif %}
             </div>
 
         </div>
 
         <div>
-            <nav><a href="/search_hospital/">관련 병원 조회</a></nav>
         </div>
     </body>
 </html>

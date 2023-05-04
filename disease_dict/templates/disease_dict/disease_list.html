@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>질병 정보</title>
+    </head>
+    <body class="body">
+        <div>
+            <nav>
+                <a href="http://127.0.0.1:8000/">Home</a>
+            </nav>
+            <h1><b>질병 정보</b></h1>
+        </div>
+
+        <div>
+            <h3>질병 이름, 증상키워드,원인 등이 출력될 자리입니다.</h3>
+            <br> 
+            {% for res in info %}
+                {% for r in res %}
+                <div>
+                    <ol>{{ r.질병명 }}</ol>  <br>
+                    증상키워드 : {{ r.증상키워드 }} <br>
+                    관련질환 : {{ r.관련질환 }} <br>
+                    진료과 : {{ r.진료과 }}<br>
+
+
+                    <button type="button" onclick="location.href='../search_symptom/disease_info/{{r.진료과}}/{{ r.질병명 }}/'"> 상세 정보 </button>
+                </div>
+                {% endfor %}
+            {% endfor %}
+
+        </div>
+
+        <div>
+            <nav>
+                <!-- <a href="/search_hospital/">관련 병원 조회</a> -->
+            </nav>
+        </div>
+    </body>
+</html>
