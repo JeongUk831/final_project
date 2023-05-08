@@ -1,4 +1,4 @@
-from django.db import models
+from djongo import models
 
 # Create your models here.
 class disease(models.Model):
@@ -14,6 +14,10 @@ class disease(models.Model):
     Token_keyword = models.TextField()       # 토큰키워드
     DEPT = models.CharField(max_length=100)  # 진료과
     Dump_name = models.CharField(max_length=10)  # 군집명
-    
-    def __str__(self):
-        return f'{self.pk}.{self.NAME}'
+
+    class Meta:
+        managed = False
+        db_table = "new_disease"  # MongoDB Collection 이름
+
+    #def __str__(self):
+    #    return f'{self.pk}.{self.NAME}'
