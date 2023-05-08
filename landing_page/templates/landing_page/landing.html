@@ -1,16 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
         <meta charset="UTF-8">
         <title>여기아파?</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                margin-top: 50px;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            nav {
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0 30px;
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+            nav a:hover {
+                color: #ffffff;
+            }
+            footer {
+                background-color: #f2f2f2;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                color: #666;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+
+            .footer-container > div {
+                flex: 0 1 30%;
+                margin-bottom: 20px;
+            }
+
+            .footer-left h3,
+            .footer-center h3,
+            .footer-right h3 {
+                color: #000;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .footer-left p,
+            .footer-center p,
+            .footer-right .social-media a {
+                color: #666;
+                font-size: 14px;
+            }
+
+            .social-media {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .social-media a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                color: #070000;
+                background-color: #8FB0C6;;
+            }
+
+            .social-media a:hover {
+                background-color: #f5f2f2;
+            }
+
+            .footer-bottom {
+                text-align: center;
+                font-size: 12px;
+                color: #070000;
+                margin-top: 30px;
+            }
+            .image {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-image: url('static/image1.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.5;
+            }
+        </style>
     </head>
-    <body class="body">
+    <body>
+        <div class="image" style="background-image: url('static/image/image1.jpg');"></div>
         <h1><b>여기 아파?</b></h1>
         <nav>
-            <div>
-                <a href="/search_symptom/">증상 검색</a>
-                <a href="/disease_dict/">질병 백과</a>
-            </div>
+            <a href="/search_symptom/">증상 검색</a>
+            <a href="/disease_dict/">질병 백과</a>
         </nav>
+        <footer>
+            <div class="footer-container">
+              <div class="footer-left">
+                <h3>여기아파</h3>
+                <p>건강한 삶을 위한 정보와 서비스</p>
+              </div>
+              <div class="footer-center">
+                <h3>연락처</h3>
+                <p>이메일: xxxx@gmail.com</p>
+                <p>전화번호: 02-123-4567</p>
+              </div>
+              <div class="footer-right">
+                <h3>SNS</h3>
+                <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ⓒ 2023 여기아파 all rights reserved.</p>
+            </div>
+        </footer>          
     </body>
 </html>
