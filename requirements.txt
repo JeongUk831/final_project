@@ -72,7 +72,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 Pygments==2.15.1
 pykospacing @ git+https://github.com/haven-jeon/PyKoSpacing.git@a058e90c9de41889c63bf2ee454bf1de064d70ff
-pymongo==4.3.3
+pymongo==3.12.3
 pyparsing==3.0.9
 python-dateutil==2.8.2
 pytz==2023.3
@@ -111,4 +111,5 @@ urllib3==1.26.15
 wcwidth==0.2.6
 Werkzeug==2.2.3
 wrapt==1.15.0
+yellowbrick==1.5
 zipp==3.15.0
