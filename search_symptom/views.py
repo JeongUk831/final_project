@@ -1,6 +1,7 @@
 from urllib.request import HTTPRedirectHandler
 from django.shortcuts import render
 from .predict_diseases import predict_diseases
+from .select_symptoms import select_dept
 import pymongo
 from bson.objectid import ObjectId
 
@@ -38,6 +39,11 @@ def disease_info(request, dept, pk) :
     return render(request, 'search_symtom/disease_info.html')
 
 def symptom2(request):
+    # result = []
+    if request.method == "GET" :
+        value = request.GET.get('dept')
+        # print(value)
+        question_list = select_dept(value)
     return render(request, 'search_symptom/symptom2.html')
 
 def doubt_disease(request):

@@ -2,23 +2,34 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>병원 조회</title>
+        <title>병원 상세 정보 조회</title>
     </head>
     <body class="body">
         <div>
             <nav>
                 <a href="http://127.0.0.1:8000/">Home</a>
             </nav>
-            <h1><b>병원 조회</b></h1>
+            <h1><b>병원 상세 정보 조회</b></h1>
         </div>
 
         <div>
             <h3>병원 정보 출력 자리입니다.</h3>
-            {% for hospital in page_obj  %}
+            {% for hospital in info  %}
             <h4>병원 이름</h4>
-            <a href="../hospital_info/{{hospital.기관ID}}">{{hospital.기관명}}</a> <br>
-
-            <h3>병원 운영 시간 등등</h3>
+           기관명 : {{hospital.기관명}}<br>
+           주소 : {{hospital.주소}}<br>
+           병원분류명 : {{hospital.병원분류명}}<br>
+           응급실운영여부 : {{hospital.응급실운영여부}}<br>
+           비고 : {{hospital.비고}}<br>
+           기관설명상세 : {{hospital.기관설명상세}}<br>
+           간이약도 : {{hospital.간이약도}}<br>
+           대표전화1 : {{hospital.대표전화1}}<br>
+           응급실전화 : {{hospital.응급실전화}}<br>
+           평일진료시간 : {{hospital.평일진료시간}}<br>
+           토요일진료시간 : {{hospital.토요일진료시간}}<br>
+           일요일진료시간 : {{hospital.일요일진료시간}}<br>
+           공휴일진료시간 : {{hospital.공휴일진료시간}}<br>
+           진료과 : {{hospital.진료과}}<br>
             {% endfor %}
         </div>
 
