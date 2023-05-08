@@ -32,22 +32,12 @@
            진료과 : {{hospital.진료과}}<br>
             {% endfor %}
         </div>
-
-        <span class="step-links">
-            {% if page_obj.has_previous %}
-              <a href="?page=1">&laquo; 처음</a>
-              <a href="?page={{ page_obj.previous_page_number }}">이전</a>
-            {% endif %}
-        
-            <span class="current-page">
-              페이지 {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-            </span>
-        
-            {% if page_obj.has_next %}
-              <a href="?page={{ page_obj.next_page_number }}">다음</a>
-              <a href="?page={{ page_obj.paginator.num_pages }}">끝 &raquo;</a>
-            {% endif %}
-          </span>
-        </div>
+        <input type="button" value="돌아가기" onclick="back()">
     </body>
 </html>
+
+<script>
+    const back = () => {
+        window.history.back();
+    }
+</script>
