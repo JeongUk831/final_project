@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,27 +101,27 @@ WSGI_APPLICATION = "final.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': True,
-        'LOGGING': {
-            'version': 1,
-            'loggers': {
-                'djongo': {
-                    'level': 'DEBUG',
-                    'propogate': False,                        
-                }
-            },
-         },
+        #'ENFORCE_SCHEMA': True,
+        #'LOGGING': {
+        #    'version': 1,
+        #    'loggers': {
+        #        'djongo': {
+        #            'level': 'DEBUG',
+        #            'propogate': False,                        
+        #        }
+        #    },
+        # },
         'NAME': 'final',
-        'CLIENT': {
-            'host': 'localhost',
-            'port': 27017,
-            'username': 'admin',
-            'password': "test123",
-            'authSource': 'admin',
-            'authMechanism': 'DEFAULT'
+        #'CLIENT': {
+        #    'host': 'localhost',
+        #    'port': 27017
+        #    'username': 'admin',
+        #    'password': "test123",
+        #    'authSource': 'admin',
+        #    'authMechanism': 'DEFAULT'
         }
     }
-}
+#}
 
 
 # Password validation
